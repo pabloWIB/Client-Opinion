@@ -1,50 +1,142 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="normalize.css">
-	<link rel="stylesheet" href="styles.css">
-	<link rel="icon" type="image/x-icon" href="Client-Opinion.png">
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-beta1/jquery.slim.min.js"></script>
-	<style>
-	</style>
-	<title>JoyfulBloomers</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Built by Pablo Nieto Pérez — wib.digital
+       Need changes or a new build? https://www.fiverr.com/pablonietop -->
+  <meta name="author" content="Pablo Nieto Pérez — wib.digital">
+  <link rel="author" href="https://www.fiverr.com/pablonietop">
+  <title>JoyfulBloomers — Client reviews of our online flower shop</title>
+  <meta name="description" content="Four client reviews of JoyfulBloomers, an online flower shop, in a carousel you can move with the arrows, the flower markers, the keyboard or a swipe.">
+  <link rel="canonical" href="https://clientopinion.wib.digital/">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://clientopinion.wib.digital/">
+  <meta property="og:title" content="JoyfulBloomers — Client reviews of our online flower shop">
+  <meta property="og:description" content="Four client reviews of JoyfulBloomers, an online flower shop, in a carousel you can move with the arrows, the flower markers, the keyboard or a swipe.">
+  <meta property="og:image" content="https://clientopinion.wib.digital/assets/img/content/og-cover.png">
+  <link rel="icon" type="image/png" href="assets/img/logo/wib-icon.png">
+  <link rel="apple-touch-icon" href="assets/img/logo/wib-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap">
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/layout.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+  <script src="assets/js/main.js" defer></script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Pablo Nieto Pérez",
+    "url": "https://wib.digital",
+    "jobTitle": "Web Designer and Developer",
+    "sameAs": [
+      "https://www.fiverr.com/pablonietop",
+      "https://www.linkedin.com/in/pablo-nieto-perez-39a530292"
+    ]
+  }
+  </script>
 </head>
 <body>
-	<header>
-		<div class="top-carusel">
-			<div>
-				<img src="google.svg" alt="">
-			</div>
-			<span>REVIEWS</span>
-			<h2>Our Clients say</h2>
-		</div>
-		<div class="carousel-container">
-			<div class="carousel">
-				<div class="slide">
-					<p>Ordered flowers online and they were the best bouquet! Impressed everyone around. Highly recommend this flower shop!" - Sarah Thompson</p>
-				</div>
-				<div class="slide">
-					<p>"I was hesitant about ordering flowers online, but I'm so glad I did! The bouquet I received was absolutely stunning and brought so much joy to my home. I can't recommend this flower shop enough!" - Michael Ramirez</p>
-				</div>
-				<div class="slide">
-					<p>"The online flower shop I tried exceeded all my expectations. The bouquet was a work of art, and the flowers were so fresh and vibrant. It was the highlight of the event, and I'll definitely be a repeat customer!" - Emily Johnson</p>
-				</div>
-				<div class="slide">
-					<p>"I recently ordered flowers online for a friend's birthday, and they were a hit! The arrangement was unique and beautifully presented. I've already shared the flower shop's information with several friends - they're that good!" - Daniel Lee</p>
-				</div>
-			</div>
-			<div class="carousel-indicator">
-				<div class="indicator-dot"></div>
-				<div class="indicator-dot"></div>
-				<div class="indicator-dot"></div>
-				<div class="indicator-dot"></div>
-			</div>
-			<button class="prev-button"></button>
-			<button class="next-button"></button>
-		</div>	
-	</header>																
-	<script src="script.js"></script>
+  <header class="site-header">
+    <div class="container">
+      <a class="site-header__brand" href="index.html" aria-current="page">Joyful<span>Bloomers</span></a>
+    </div>
+  </header>
+
+  <main class="site-main">
+    <div class="container">
+      <section class="reviews" aria-labelledby="reviews-title">
+        <div class="reviews__intro">
+          <img class="reviews__source" src="assets/img/logo/google.svg" width="78" height="28" alt="Google Reviews">
+          <p class="reviews__eyebrow">Reviews</p>
+          <h1 id="reviews-title">Our clients say</h1>
+        </div>
+
+        <div class="carousel" data-carousel>
+          <div class="carousel__viewport" data-carousel-viewport aria-live="polite">
+            <ul class="carousel__track" data-carousel-track>
+              <li class="carousel__slide" data-carousel-slide>
+                <figure class="review">
+                  <blockquote class="review__quote">
+                    <p>“Ordered flowers online and they were the best bouquet! Impressed everyone around. Highly recommend this flower shop!”</p>
+                  </blockquote>
+                  <figcaption class="review__author">Sarah Thompson</figcaption>
+                </figure>
+              </li>
+              <li class="carousel__slide" data-carousel-slide>
+                <figure class="review">
+                  <blockquote class="review__quote">
+                    <p>“I was hesitant about ordering flowers online, but I’m so glad I did! The bouquet I received was absolutely stunning and brought so much joy to my home. I can’t recommend this flower shop enough!”</p>
+                  </blockquote>
+                  <figcaption class="review__author">Michael Ramirez</figcaption>
+                </figure>
+              </li>
+              <li class="carousel__slide" data-carousel-slide>
+                <figure class="review">
+                  <blockquote class="review__quote">
+                    <p>“The online flower shop I tried exceeded all my expectations. The bouquet was a work of art, and the flowers were so fresh and vibrant. It was the highlight of the event, and I’ll definitely be a repeat customer!”</p>
+                  </blockquote>
+                  <figcaption class="review__author">Emily Johnson</figcaption>
+                </figure>
+              </li>
+              <li class="carousel__slide" data-carousel-slide>
+                <figure class="review">
+                  <blockquote class="review__quote">
+                    <p>“I recently ordered flowers online for a friend’s birthday, and they were a hit! The arrangement was unique and beautifully presented. I’ve already shared the flower shop’s information with several friends — they’re that good!”</p>
+                  </blockquote>
+                  <figcaption class="review__author">Daniel Lee</figcaption>
+                </figure>
+              </li>
+            </ul>
+          </div>
+
+          <div class="carousel__controls">
+            <button class="carousel__arrow" type="button" data-carousel-prev aria-label="Previous review">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+                <path d="m14.5 5-7 7 7 7"></path>
+              </svg>
+            </button>
+
+            <ul class="carousel__indicators">
+              <li>
+                <button class="carousel__dot" type="button" data-carousel-dot aria-label="Show review 1: Sarah Thompson"></button>
+              </li>
+              <li>
+                <button class="carousel__dot" type="button" data-carousel-dot aria-label="Show review 2: Michael Ramirez"></button>
+              </li>
+              <li>
+                <button class="carousel__dot" type="button" data-carousel-dot aria-label="Show review 3: Emily Johnson"></button>
+              </li>
+              <li>
+                <button class="carousel__dot" type="button" data-carousel-dot aria-label="Show review 4: Daniel Lee"></button>
+              </li>
+            </ul>
+
+            <button class="carousel__arrow" type="button" data-carousel-next aria-label="Next review">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+                <path d="m9.5 5 7 7-7 7"></path>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p class="site-footer__note">Demo of a reusable reviews component. JoyfulBloomers and the four reviews above are sample content, not a real shop or real customers.</p>
+      <p class="site-footer__links">
+        <a href="https://github.com/pabloWIB/Client-Opinion">Source on GitHub</a>
+        <a href="https://wib.digital">wib.digital</a>
+      </p>
+    </div>
+    <p class="site-credit">
+      Built by <a href="https://wib.digital" rel="noopener">wib.digital</a> —
+      <a href="https://www.fiverr.com/pablonietop" rel="noopener">hire me on Fiverr</a>
+    </p>
+  </footer>
 </body>
 </html>

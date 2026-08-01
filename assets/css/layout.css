@@ -1,0 +1,118 @@
+/* ==========================================================================
+   layout.css — page shell, container, header and footer
+   ========================================================================== */
+
+/* --- Page shell --------------------------------------------------------- */
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  width: 100%;
+  max-width: var(--container-width);
+  margin-inline: auto;
+  padding-inline: var(--space-3);
+}
+
+.site-main {
+  flex: 1 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-block: var(--space-6);
+}
+
+/* --- Header ------------------------------------------------------------- */
+
+.site-header {
+  flex: 0 0 auto;
+  padding-block: var(--space-4);
+  border-bottom: 1px solid var(--color-border);
+  background-color: var(--color-surface);
+}
+
+.site-header .container {
+  display: flex;
+  align-items: center;
+}
+
+.site-header__brand {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  font-size: var(--text-lg);
+  font-weight: 700;
+  color: var(--color-ink);
+  text-decoration: none;
+  letter-spacing: -0.01em;
+}
+
+.site-header__brand:hover {
+  color: var(--color-accent-strong);
+}
+
+.site-header__brand span {
+  color: var(--color-accent);
+}
+
+/* --- Footer ------------------------------------------------------------- */
+
+.site-footer {
+  flex: 0 0 auto;
+  padding-block: var(--space-5);
+  border-top: 1px solid var(--color-border);
+  background-color: var(--color-surface);
+  font-size: var(--text-sm);
+  color: var(--color-muted);
+}
+
+.site-footer .container {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.site-footer__note {
+  max-width: var(--measure);
+}
+
+.site-footer__links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-4);
+}
+
+.site-footer__links a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+}
+
+/* --- Breakpoints -------------------------------------------------------- */
+
+@media (min-width: 480px) {
+  .container {
+    padding-inline: var(--space-4);
+  }
+}
+
+@media (min-width: 768px) {
+  .site-main {
+    padding-block: var(--space-7);
+  }
+
+  .site-footer .container {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-5);
+  }
+}
+
+@media (min-width: 1024px) {
+  .site-main {
+    padding-block: var(--space-8);
+  }
+}
